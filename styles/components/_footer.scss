@@ -13,47 +13,36 @@ main {
 
 /* Footer styles */
 footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px 20px;
     text-align: center;
-    padding: 10px 0;
+    position: relative;
     bottom: 0;
     width: 100%;
-    background-color: $color-secundario;
-    color: $blanco;
-    
 }
 
-/* Footer container styles */
 .footer-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: space-between;
 }
 
-/* Column and other styles remain unchanged */
 .footer-column {
-    flex: auto;
-    margin: 10px;
-    min-width: 200px;
+    flex: 1;
+    padding: 10px;
 }
 
 .footer-column h3 {
-    font-size: 15px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    color: $color-principal;
+    margin-top: 0;
 }
 
 .footer-column a {
-    color: $blanco;
+    color: white;
     text-decoration: none;
-    display: block;
-    margin-bottom: 10px;
 }
 
 .footer-column a:hover {
-    color: $color-principal;
+    text-decoration: underline;
 }
 
 .contact-info p {

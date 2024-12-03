@@ -1,0 +1,121 @@
+@charset "UTF-8";
+h1 {
+  color: #074772;
+  font-family: "Arial", sans-serif;
+}
+
+h2 {
+  size: small;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la pantalla */
+  margin: 0; /* Eliminar márgenes por defecto */
+}
+
+/* Hacer que el contenido principal ocupe el espacio disponible */
+.container.Set {
+  flex: 1; /* El contenido de la página debe ocupar el espacio disponible */
+}
+
+.medico {
+  background-color: #fff;
+  border: 1px solid #111111;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.medico-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+}
+
+.medico-table td {
+  padding: 8px;
+  border: 1px solid #111111;
+}
+
+.medico-key {
+  font-weight: bold;
+  background-color: #8b8b8b;
+}
+
+.medico-value {
+  background-color: #fff;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.clone-button {
+  background-color: #8b8b8b;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.clone-button:hover {
+  background-color: #727272;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#editForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+#editForm input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #111111;
+  border-radius: 4px;
+}/*# sourceMappingURL=intranet.css.map */
