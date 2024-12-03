@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospital Español de Colón</title>
-    <link rel = "stylesheet" href="styles/main.css">
+    <title>Reservar Hora Médica</title>
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
 </head>
-<body class = "color-cuerpo">
+<body class="color-cuerpo">
     <header>
-        <a href = "index.html" class = "logo">
+        <a href="index.html" class="logo">
             <img src="resources/images/Logo.png" alt="Logo HEDC" class="logo-img">
             <h1 class="logo-nombre"> Hospital Español de Colón</h1>
         </a>
@@ -19,31 +18,24 @@
         <nav>
             <!-- MENU HORIZONTAL -->
             <ul class="menu">
-                <li><a class="Destacado"    href = "reservar.html">        Reservar</a></li>
-                <li><a class="Botoncito"    href = "Equipo-Médico.html">   Equipo Médico</a></li>
-                <li><a class="Botoncito"    href = "Contacto.html">             Contacto</a></li>
+                <li><a class="Destacado" href="reservar.html">Reservar</a></li>
+                <li><a class="Botoncito" href="Equipo-Médico.html">Equipo Médico</a></li>
+                <li><a class="Botoncito" href="Contacto.html">Contacto</a></li>
             </ul>
             <!-- MENU VERTICAL -->
             <div class="dropdown">
-npm init -y
                 <div class="dropdown-content">
-                    <a class="Destacado"    href = "reservar.html"> Reservar</a>
-                    <a class="Botoncito"    href = "Equipo-Médico.html">Equipo Médico</a>
-                    <a class="Botoncito"    href = "Contacto.html"> Contacto</a>
+                    <a class="Destacado" href="reservar.html">Reservar</a>
+                    <a class="Botoncito" href="Equipo-Médico.html">Equipo Médico</a>
+                    <a class="Botoncito" href="Contacto.html">Contacto</a>
                 </div>
             </div>
         </nav>
-
     </header>
 
-
-
-
-    <div class="container reservation-form ">
-        <h2>Reserva tu Hora</h2>
-
-        <form action="/reserva" method="POST">
-
+    <div class="container reservation-form">
+        <h1>Reservar Horas Médicas</h1>
+        <form id="reservaForm">
             <label for="name">Nombre Completo</label>
             <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
 
@@ -55,81 +47,68 @@ npm init -y
             <label for="phone">Teléfono</label>
             <input type="tel" id="phone" name="phone" placeholder="Ingresa tu número de teléfono" required>
 
-
-            <label for="specialty">Especialidad</label>
-            <select id="specialty" name="specialty" required>
-                <option value="" disabled selected>Selecciona una especialidad</option>
-                <option value="cardiologia">Cardiología</option>
-                <option value="neurologia">Neurología</option>
-                <option value="neumologia">Neumología</option>
-                <option value="dermatologia">Dermatología</option>
-                <option value="pediatria">Pediatría</option>
-            </select>
-
-            <label for="doctor">Doctor</label>
-            <select id="doctor" name="doctor" required>
-                <option value="" disabled selected>Selecciona un doctor</option>
-                <option value="dr_perez">Dr. Juan Pérez</option>
-                <option value="dra_lopez">Dra. Ana López</option>
-                <option value="dr_garcia">Dr. Carlos García</option>
-                <option value="dra_rodriguez">Dra. Laura Rodríguez</option>
-            </select>
-
-            <div class="form-group">
-                <label for="date">Fecha de Reserva</label>
-                <input type="date" id="date" name="date" required>
+            <div class="form-group container">
+                <label for="specialty">Especialidad</label>
+                <select id="specialty" name="specialty" required>
+                    <option value="" disabled selected>Selecciona una especialidad</option>
+                </select>
             </div>
-
             <div class="form-group">
-                <label for="time">Hora de Reserva</label>
-                <input type="time" id="time" name="time" required>
+                <label for="doctor">Doctor</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="" disabled selected>Selecciona un doctor</option>
+                </select>
             </div>
-
+            <div class="form-group">
+                <label for="day">Día</label>
+                <select id="day" name="day" required>
+                    <option value="" disabled selected>Selecciona un día</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="time">Hora</label>
+                <select id="time" name="time" required>
+                    <option value="" disabled selected>Selecciona una hora</option>
+                </select>
+            </div>
             <input type="submit" value="Reservar Hora">
         </form>
     </div>
 
-
-
-
-
-
-
+    <!-- Modal -->
+    <div id="reservaModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Resumen de la Reserva</h2>
+            <p id="reservaResumen"></p>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
             <div class="footer-column">
-                <h3 class = "fw-bold">Enlaces de Interés</h3>
-                <a href="index.html">Inicio</a>
-                <a href="Equipo-Medico.html">Nosotros</a>
-                <a href="Contacto.html">Contacto</a>
-            </div>
-
-            <div class="footer-column contact-info">
-                <h3 class = "fw-bold" >Contacto</h3>
+                <h3 class="fw-bold">Contacto</h3>
                 <p>Email: <a href="mailto:contacto@hospitalespañol.cl">contacto@hospitalespañol.cl</a></p>
                 <p>Teléfono: <a href="tel:+1234567890">+12 345 678 90</a></p>
                 <p>Dirección: Av. Vitacura 7878, Vitacura, Chile</p>
             </div>
-            
-
             <div class="footer-column">
-                <h3 class = "fw-bold">Síguenos</h3>
+                <h3 class="fw-bold">Síguenos</h3>
                 <div class="social-icons">
-                    <a href="https://www.facebook.com" target="Facebook" aria-label="Facebook">
+                    <a href="https://www.facebook.com" target="_blank" aria-label="Facebook">
                         <i class="fab fa-facebook-f"></i>
                     </a>
-                    <a href="https://www.instagram.com" target="Instagram" aria-label="Instagram">
+                    <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="https://www.linkedin.com" target="Linkedin" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
-
-
         </div>
     </footer>
+
+    <script src="JS/Personal/booking.js"></script>
 </body>
 </html>

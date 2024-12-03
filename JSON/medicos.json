@@ -5,7 +5,12 @@
         "Especialidad": "Cardiología",
         "Años de experiencia": "15",
         "Alma mater": "Universidad Nacional",
-        "Imagen": "medico1.jpeg"
+        "Imagen": "medico1.jpeg",
+        "Horarios": {
+            "Lunes": ["08:00", "08:30", "09:00", "09:30", "10:00"],
+            "Miércoles": ["13:00", "13:30", "14:00", "14:30"],
+            "Viernes": ["15:00", "15:30"]
+        }
     },
     {
         "Nombre": "Ana López",
@@ -13,7 +18,11 @@
         "Especialidad": "Dermatología",
         "Años de experiencia": "12",
         "Alma mater": "Universidad Autónoma",
-        "Imagen": "medico2.jpeg"
+        "Imagen": "medico2.jpeg",
+        "Horarios": {
+            "Martes": ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30"],
+            "Jueves": ["11:00", "11:30", "12:00", "12:30"]
+        }
     },
     {
         "Nombre": "Carlos García",
@@ -21,7 +30,12 @@
         "Especialidad": "Ortopedia",
         "Años de experiencia": "20",
         "Alma mater": "Universidad de Guadalajara",
-        "Imagen": "medico3.jpeg"
+        "Imagen": "medico3.jpeg",
+        "Horarios": {
+            "Lunes": ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30", "11:00"],
+            "Miércoles": ["14:00", "14:30", "15:00"],
+            "Viernes": ["16:00", "16:30"]
+        }
     },
     {
         "Nombre": "Laura Rodríguez",
@@ -29,7 +43,12 @@
         "Especialidad": "Ginecología",
         "Años de experiencia": "10",
         "Alma mater": "Universidad de Monterey",
-        "Imagen": "medico4.jpeg"
+        "Imagen": "medico4.jpeg",
+        "Horarios": {
+            "Martes": ["09:00", "09:30", "10:00"],
+            "Jueves": ["13:00", "13:30", "14:00", "14:30"],
+            "Viernes": ["15:00", "15:30"]
+        }
     },
     {
         "Nombre": "Andrés Gómez",
@@ -37,7 +56,12 @@
         "Especialidad": "Endocrinología",
         "Años de experiencia": "18",
         "Alma mater": "UNAM",
-        "Imagen": "medico5.jpeg"
+        "Imagen": "medico5.jpeg",
+        "Horarios": {
+            "Lunes": ["08:00", "08:30", "09:00", "09:30", "10:00"],
+            "Miércoles": ["10:30", "11:00", "11:30", "12:00"],
+            "Jueves": ["13:00", "13:30", "14:00"]
+        }
     },
     {
         "Nombre": "María Ruíz",
@@ -45,7 +69,12 @@
         "Especialidad": "Neurología",
         "Años de experiencia": "14",
         "Alma mater": "Universidad de Barcelona",
-        "Imagen": "medico6.jpeg"
+        "Imagen": "medico6.jpeg",
+        "Horarios": {
+            "Lunes": ["08:00", "08:30", "09:00"],
+            "Miércoles": ["13:00", "13:30", "14:00", "14:30"],
+            "Viernes": ["16:00", "16:30"]
+        }
     },
     {
         "Nombre": "Fernanda Espinoza",
@@ -53,7 +82,11 @@
         "Especialidad": "Gastroenterología",
         "Años de experiencia": "22",
         "Alma mater": "Universidad de Buenos Aires",
-        "Imagen": "medico7.jpeg"
+        "Imagen": "medico7.jpeg",
+        "Horarios": {
+            "Martes": ["08:00", "08:30", "09:00", "09:30", "10:00", "10:30"],
+            "Jueves": ["11:00", "11:30", "12:00"]
+        }
     },
     {
         "Nombre": "Pablo Soto",
@@ -61,7 +94,12 @@
         "Especialidad": "Oftalmología",
         "Años de experiencia": "16",
         "Alma mater": "Universidad de Chile",
-        "Imagen": "medico8.jpeg"
+        "Imagen": "medico8.jpeg",
+        "Horarios": {
+            "Lunes": ["09:00", "09:30", "10:00", "10:30"],
+            "Miércoles": ["13:00", "13:30", "14:00", "14:30"],
+            "Viernes": ["15:00", "15:30"]
+        }
     },
     {
         "Nombre": "Mario Martínez",
@@ -69,7 +107,12 @@
         "Especialidad": "Otorrinolaringología",
         "Años de experiencia": "11",
         "Alma mater": "Universidad de Chile",
-        "Imagen": "medico9.jpeg"
+        "Imagen": "medico9.jpeg",
+        "Horarios": {
+            "Martes": ["08:00", "08:30", "09:00"],
+            "Jueves": ["13:00", "13:30", "14:00", "14:30"],
+            "Viernes": ["16:00"]
+        }
     },
     {
         "Nombre": "Aldo Sheffer",
@@ -77,7 +120,12 @@
         "Especialidad": "Pediatría",
         "Años de experiencia": "9",
         "Alma mater": "Universidad del Valle",
-        "Imagen": "medico10.jpeg"
+        "Imagen": "medico10.jpeg",
+        "Horarios": {
+            "Lunes": ["08:00", "08:30"],
+            "Miércoles": ["09:00", "09:30", "10:00", "10:30"],
+            "Viernes": ["14:00", "14:30"]
+        }
     },
     {
         "Nombre": "Derek Sheppard",
@@ -85,7 +133,12 @@
         "Especialidad": "Neurología",
         "Años de experiencia": "17",
         "Alma mater": "Pontificia Universidad Católica de Chile",
-        "Imagen": "medico11.jpeg"
+        "Imagen": "medico11.jpeg",
+        "Horarios": {
+            "Lunes": ["08:00", "08:30", "09:00", "09:30"],
+            "Martes": ["11:00", "11:30", "12:00", "12:30"],
+            "Viernes": ["15:00", "15:30"]
+        }
     },
     {
         "Nombre": "Justin Soto",
@@ -93,6 +146,11 @@
         "Especialidad": "Cardiología",
         "Años de experiencia": "45",
         "Alma mater": "New York University",
-        "Imagen": "medico12.jpeg"
+        "Imagen": "medico12.jpeg",
+        "Horarios": {
+            "Miércoles": ["09:00", "09:30", "10:00", "10:30", "11:00"],
+            "Jueves": ["12:00", "12:30", "13:00"],
+            "Viernes": ["14:00", "14:30"]
+        }
     }
 ]

@@ -1,0 +1,30 @@
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    label {
+        font-weight: bold;
+    }
+
+    select, input[type="submit"] {
+        padding: 10px;
+        border: 1px solid $border-color;
+        border-radius: 4px;
+    }
+
+    select {
+        background-color: $background-color;
+    }
+
+    input[type="submit"] {
+        background-color: $primary-color;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: darken($primary-color, 10%);
+        }
+    }
+}
