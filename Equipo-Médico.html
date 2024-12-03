@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Español de Colón</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="color-cuerpo">
+    <header>
+        <a href="index.html" class="logo">
+            <img src="resources/images/Logo.png" alt="Logo HEDC" class="logo-img">
+            <h1 class="logo-nombre">Hospital Español de Colón</h1>
+        </a>
+
+        <nav>
+            <!-- MENU HORIZONTAL -->
+            <ul class="menu">
+                <li><a class="Destacado" href="reservar.html">Reservar</a></li>
+                <li><a class="Botoncito" href="Equipo-Médico.html">Equipo Médico</a></li>
+                <li><a class="Botoncito" href="Contacto.html">Contacto</a></li>
+            </ul>
+            <!-- MENU VERTICAL -->
+            <div class="dropdown">
+                <button class="dropbtn">MENU</button>
+                <div class="dropdown-content">
+                    <a class="Destacado" href="reservar.html">Reservar</a>
+                    <a class="Botoncito" href="Equipo-Médico.html">Equipo Médico</a>
+                    <a class="Botoncito" href="Contacto.html">Contacto</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h1>Nuestro experimentado Equipo Médico</h1>
+
+            <!-- Filtros -->
+<<<<<<< HEAD
+            <div>
+                <label for="specialty-filter">Especialidad:</label>
+                <select id="specialty-filter">
+                    <option value="Pediatria">Todas</option>
+                    <option value="all">Todas</option>
+                </select>
+            
+                <label for="experience-filter">Años de experiencia:</label>
+=======
+            <div class="container">
+                <label for="specialty-filter">Especialidad:</label>
+                <select id="specialty-filter">
+                    <option value="all">Todas</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Ortopedia">Ortopedia</option>
+                    <option value="Ginecología">Ginecología</option>
+                    <option value="Endocrinología">Endocrinología</option>
+                    <option value="Neurología">Neurología</option>
+                    <option value="Gastroenterología">Gastroenterología</option>
+                    <option value="Oftalmología">Oftalmología</option>
+                    <option value="Otorrinolaringología">Otorrinolaringología</option>
+                    <option value="Pediatría">Pediatría</option>
+                    
+                </select>
+            
+                <label class=inline-block for="experience-filter">Años de experiencia:</label>
+>>>>>>> 9abbf3bef340323797d75158b0c2d94947c288db
+                <select id="experience-filter">
+                    <option value="all">Cualquiera</option>
+                    <option value="5">5+</option>
+                    <option value="10">10+</option>
+                    <option value="15">15+</option>
+                </select>
+<<<<<<< HEAD
+            </div>
+
+            <div>
+                <label for="sort-experience">Ordenar por experiencia:</label>
+=======
+
+
+                <label class=inline-block for="sort-experience">Ordenar por experiencia:</label>
+>>>>>>> 9abbf3bef340323797d75158b0c2d94947c288db
+                <select id="sort-experience">
+                    <option value="none">Sin ordenar</option>
+                    <option value="asc">Menor a mayor</option>
+                    <option value="desc">Mayor a menor</option>
+                </select>
+            </div>
+
+            <!-- Contenedor dinámico para las tarjetas -->
+            <div id="team-container" class="team-container team-card">
+                <!-- Las tarjetas serán generadas aquí dinámicamente con JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="fw-bold">Enlaces de Interés</h3>
+                <a href="index.html">Inicio</a>
+                <a href="Equipo-Médico.html">Nosotros</a>
+                <a href="Contacto.html">Contacto</a>
+            </div>
+
+            <div class="footer-column contact-info">
+                <h3 class="fw-bold">Contacto</h3>
+                <p>Email: <a href="mailto:contacto@hospitalespañol.cl">contacto@hospitalespañol.cl</a></p>
+                <p>Teléfono: <a href="tel:+1234567890">+12 345 678 90</a></p>
+                <p>Dirección: Av. Vitacura 7878, Vitacura, Chile</p>
+            </div>
+
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9abbf3bef340323797d75158b0c2d94947c288db
+            <div class="footer-column">
+                <h3 class="fw-bold">Síguenos</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="Facebook" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com" target="Instagram" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com" target="LinkedIn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9abbf3bef340323797d75158b0c2d94947c288db
+        </div>
+    </footer>
+
+    <!-- Enlace al archivo JS -->
+    <script src="JS/Personal/loadDoctorsEstaticos.js"></script>
+</body>
+</html>

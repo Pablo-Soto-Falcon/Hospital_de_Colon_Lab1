@@ -1,0 +1,98 @@
+[
+    {
+        "Nombre": "Juan Pérez",
+        "Sexo": "Hombre",
+        "Especialidad": "Cardiología",
+        "Años de experiencia": "15",
+        "Alma mater": "Universidad Nacional",
+        "Imagen": "medico1.jpeg"
+    },
+    {
+        "Nombre": "Ana López",
+        "Sexo": "Mujer",
+        "Especialidad": "Dermatología",
+        "Años de experiencia": "12",
+        "Alma mater": "Universidad Autónoma",
+        "Imagen": "medico2.jpeg"
+    },
+    {
+        "Nombre": "Carlos García",
+        "Sexo": "Hombre",
+        "Especialidad": "Ortopedia",
+        "Años de experiencia": "20",
+        "Alma mater": "Universidad de Guadalajara",
+        "Imagen": "medico3.jpeg"
+    },
+    {
+        "Nombre": "Laura Rodríguez",
+        "Sexo": "Mujer",
+        "Especialidad": "Ginecología",
+        "Años de experiencia": "10",
+        "Alma mater": "Universidad de Monterey",
+        "Imagen": "medico4.jpeg"
+    },
+    {
+        "Nombre": "Andrés Gómez",
+        "Sexo": "Hombre",
+        "Especialidad": "Endocrinología",
+        "Años de experiencia": "18",
+        "Alma mater": "UNAM",
+        "Imagen": "medico5.jpeg"
+    },
+    {
+        "Nombre": "María Ruíz",
+        "Sexo": "Mujer",
+        "Especialidad": "Neurología",
+        "Años de experiencia": "14",
+        "Alma mater": "Universidad de Barcelona",
+        "Imagen": "medico6.jpeg"
+    },
+    {
+        "Nombre": "Fernanda Espinoza",
+        "Sexo": "Mujer",
+        "Especialidad": "Gastroenterología",
+        "Años de experiencia": "22",
+        "Alma mater": "Universidad de Buenos Aires",
+        "Imagen": "medico7.jpeg"
+    },
+    {
+        "Nombre": "Pablo Soto",
+        "Sexo": "Hombre",
+        "Especialidad": "Oftalmología",
+        "Años de experiencia": "16",
+        "Alma mater": "Universidad de Chile",
+        "Imagen": "medico8.jpeg"
+    },
+    {
+        "Nombre": "Mario Martínez",
+        "Sexo": "Hombre",
+        "Especialidad": "Otorrinolaringología",
+        "Años de experiencia": "11",
+        "Alma mater": "Universidad de Chile",
+        "Imagen": "medico9.jpeg"
+    },
+    {
+        "Nombre": "Aldo Sheffer",
+        "Sexo": "Hombre",
+        "Especialidad": "Pediatría",
+        "Años de experiencia": "9",
+        "Alma mater": "Universidad del Valle",
+        "Imagen": "medico10.jpeg"
+    },
+    {
+        "Nombre": "Derek Sheppard",
+        "Sexo": "Hombre",
+        "Especialidad": "Neurología",
+        "Años de experiencia": "17",
+        "Alma mater": "Pontificia Universidad Católica de Chile",
+        "Imagen": "medico11.jpeg"
+    },
+    {
+        "Nombre": "Justin Soto",
+        "Sexo": "Hombre",
+        "Especialidad": "Cardiología",
+        "Años de experiencia": "45",
+        "Alma mater": "New York University",
+        "Imagen": "medico12.jpeg"
+    }
+]

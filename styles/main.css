@@ -1,0 +1,481 @@
+@charset "UTF-8";
+h1 {
+  color: #074772;
+  font-family: "Didot", sans-serif;
+}
+
+h2 {
+  size: small;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la pantalla */
+  margin: 0; /* Eliminar márgenes por defecto */
+}
+
+/* Hacer que el contenido principal ocupe el espacio disponible */
+.container.Set {
+  flex: 1; /* El contenido de la página debe ocupar el espacio disponible */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: #074772;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 70px;
+  width: auto;
+  margin-right: 10px;
+  margin-left: 15px;
+}
+
+.logo-nombre {
+  vertical-align: auto;
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  font-family: "Arial", sans-serif;
+}
+
+.nav-link {
+  list-style: none;
+  display: list-item;
+  margin: 0;
+  padding: 0;
+}
+
+.reservar {
+  display: flex;
+  background-color: #afd896;
+  color: #111111;
+}
+
+@media (max-width: 767px) {
+  .logo-nombre {
+    font-size: 16px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .logo-nombre {
+    font-size: 20px;
+  }
+}
+nav {
+  color: #fff;
+  font-weight: 400;
+  display: inline-flex;
+  text-decoration: none;
+  color: #fff;
+}
+
+.menu {
+  display: inline-flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.menu li {
+  margin: 0 15px;
+  float: left;
+  border: 1px solid transparent;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 6px 16px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.menu li a:hover {
+  color: #fff;
+  background-color: #236c9d;
+}
+
+.Destacado {
+  background-color: #afd896;
+  color: #074772;
+  text-decoration: none;
+}
+
+.Botoncito {
+  background-color: #074772;
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropbtn {
+  background-color: #236c9d;
+  border-radius: 10%;
+  color: #fff;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  display: none;
+}
+
+.dropdown {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .dropbtn {
+    display: flex;
+  }
+  .dropdown {
+    font-size: small;
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px #111111;
+    z-index: 1;
+  }
+  .dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin-right: 50px;
+  }
+  .dropdown-content a:hover {
+    color: #fff;
+    background-color: #236c9d;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .dropdown:hover .dropbtn {
+    background-color: #236c9d;
+    border-radius: 40%;
+  }
+  .Destacado {
+    color: #111111;
+  }
+}
+/* Menú en pantallas entre 768px y 1024px (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .menu li {
+    margin: 0 10px;
+  }
+  .menu li a {
+    padding: 8px 12px;
+  }
+  .dropdown {
+    display: none;
+  }
+}
+/* Menú en pantallas grandes (escritorios) */
+@media (min-width: 1024px) {
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .menu li {
+    margin: 0 20px;
+  }
+  .menu li a {
+    padding: 10px 20px;
+  }
+  .dropdown {
+    display: none;
+  }
+}
+footer {
+  text-align: center;
+  padding: 10px 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #074772;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: auto;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: #afd896;
+}
+
+.footer-column a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+  color: #afd896;
+}
+
+.contact-info p {
+  margin: 10px 0;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 24px;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #afd896;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 0;
+  }
+  .footer-column {
+    font-size: 10px;
+  }
+  .social-icons a {
+    color: #fff;
+    font-size: 14px;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+}
+.services-container {
+  display: flex;
+  justify-content: space-around; /* Espacio entre los servicios */
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si es necesario */
+  padding: 20px;
+  max-width: 1200px; /* Máximo ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+}
+
+.service {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.service img {
+  max-width: 100%;
+  height: 160px;
+  border-radius: 10px;
+}
+
+.service h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.service p {
+  color: #8b8b8b;
+}
+
+.Set {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.Titulo1 {
+  margin-top: 25px;
+  color: #afd896;
+}
+
+.cuerpo-lleno {
+  display: flex;
+}
+
+.reservation-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reservation-form h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Estilos para los campos del formulario */
+.reservation-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.reservation-form input,
+.reservation-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.reservation-form input[type=submit] {
+  background-color: #38b6ff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.reservation-form input[type=submit]:hover {
+  background-color: #005f99;
+}
+
+.contact-form {
+  justify-items: center;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: #ccc;
+  max-width: 400px;
+  width: 100%;
+}
+
+.contact-form h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: black;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.contact-form textarea {
+  resize: none;
+  height: 100px;
+}
+
+.contact-form input[type=submit] {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.contact-form input[type=submit]:hover {
+  background-color: gray;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team-card h3 {
+  margin: 15px 0 5px;
+  font-size: 18px;
+  color: #333;
+}
+
+.team-card p {
+  font-size: 14px;
+  color: #555;
+}/*# sourceMappingURL=main.css.map */

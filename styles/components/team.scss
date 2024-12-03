@@ -1,0 +1,46 @@
+.team-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); // Ampliar el tamaño mínimo de las tarjetas.
+gap: 30px; // Incrementar la separación entre las tarjetas.
+padding: 40px; // Aumentar el padding para más espacio alrededor.
+max-width: 1200px;
+margin: 0 auto;
+justify-items: center; // Centrar las tarjetas dentro del contenedor.
+}
+
+.team-card {
+background-color: #ffffff; // Un color más limpio para las tarjetas.
+border-radius: 15px; // Ajustar el radio de las esquinas para un look más moderno.
+text-align: center;
+padding: 20px;
+box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); // Mayor profundidad en las sombras.
+transition: transform 0.3s ease, box-shadow 0.3s ease; // Transición para animación en hover.
+
+&:hover {
+    transform: translateY(-10px); // Animación de elevación en hover.
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); // Sombra más intensa en hover.
+}
+}
+
+.team-card img {
+width: 120px; // Ajustar tamaño de las imágenes.
+height: 120px;
+border-radius: 50%;
+object-fit: cover;
+margin: 0 auto 15px; // Alinear y separar la imagen del contenido.
+border: 3px solid #ddd; // Borde para destacar la imagen.
+}
+
+
+.team-card h3 {
+margin: 15px 0 10px;
+font-size: 20px; // Texto más grande para mejor legibilidad.
+color: #222; // Color más oscuro para mejor contraste.
+font-weight: bold; // Hacer que el título resalte más.
+}
+
+.team-card p {
+font-size: 16px; // Texto un poco más grande.
+color: #666; // Color más sutil.
+line-height: 1.6; // Mejorar la separación entre líneas.
+}

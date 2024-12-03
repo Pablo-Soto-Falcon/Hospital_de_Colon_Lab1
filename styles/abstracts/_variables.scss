@@ -1,0 +1,33 @@
+//Variables
+$color-principal: #afd896;
+$color-secundario: #074772;
+$color-terciario: #236c9d;
+$negro: #111111;
+$blanco: #fff;
+$gris: #8b8b8b;
+$font-principal: 'Didot', sans-serif;
+$font-secundaria: 'Arial', sans-serif;
+
+// .color-cuerpo{
+//     background: $color-principal;
+// }
+
+h1{
+    color: $color-secundario;
+    font-family: $font-secundaria;
+}
+
+h2{
+    size: small;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la pantalla */
+    margin: 0; /* Eliminar márgenes por defecto */
+}
+  /* Hacer que el contenido principal ocupe el espacio disponible */
+.container.Set {
+    flex: 1; /* El contenido de la página debe ocupar el espacio disponible */
+}

@@ -1,0 +1,88 @@
+/* General body and HTML settings */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content container */
+main {
+    flex: 1;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+    background-color: $color-secundario;
+    color: $blanco;
+    
+}
+
+/* Footer container styles */
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Column and other styles remain unchanged */
+.footer-column {
+    flex: auto;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-column h3 {
+    font-size: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: $color-principal;
+}
+
+.footer-column a {
+    color: $blanco;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    color: $color-principal;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: $blanco;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: $color-principal;
+}
+
+/* Responsive styles */
+@media(max-width: 767px) {
+    footer {
+        padding: 0;
+    }
+    .footer-column {
+        font-size: 10px;
+    }
+
+    .social-icons a {
+
+        font-size: 14px;
+
+    }
+}
