@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetchData('servicios.json').then(services => {
+    fetchData('servicios').then(services => {
         displayServices(services);
     });
 });
 
 async function fetchData(file) {
     try {
-        const response = await fetch('JSON/servicios.json');
+        const response = await fetch(`/api/${file}`);
         if (!response.ok) {
             throw new Error('Network response was not ok');
         }
@@ -21,15 +21,24 @@ async function fetchData(file) {
 function displayServices(services) {
     const container = document.getElementById('services-container');
     container.innerHTML = '';
-    services.forEach(service => {
+
+    const groupedServices = services.reduce((acc, service) => {
+        if (!acc[service.Especialidad]) {
+            acc[service.Especialidad] = [];
+        }
+        acc[service.Especialidad].push(service.Nombre);
+        return acc;
+    }, {});
+
+    for (const [especialidad, nombres] of Object.entries(groupedServices)) {
         const serviceElement = document.createElement('div');
         serviceElement.classList.add('service-card');
 
         serviceElement.innerHTML = `
-            <h3>${service.Servicio}</h3>
-            <p><strong>Descripción:</strong> ${service.Descripción}</p>
+            <h3>${especialidad}</h3>
+            <p><strong>Doctores:</strong> ${nombres.join(', ')}</p>
         `;
 
         container.appendChild(serviceElement);
-    });
+    }
 }

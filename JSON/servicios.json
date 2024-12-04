@@ -1,54 +1,54 @@
 [
     {
-      "Nombre": "Juan Pérez",
-      "Especialidad": "Cardiología"
+    "Nombre": "Juan Pérez",
+    "Especialidad": "Cardiología"
     },
     {
-      "Nombre": "Ana López",
-      "Especialidad": "Dermatología"
+    "Nombre": "Ana López",
+    "Especialidad": "Dermatología"
     },
     {
-      "Nombre": "Carlos García",
-      "Especialidad": "Ortopedia"
+    "Nombre": "Carlos García",
+    "Especialidad": "Ortopedia"
     },
     {
-      "Nombre": "Laura Rodríguez",
-      "Especialidad": "Ginecología"
+    "Nombre": "Laura Rodríguez",
+    "Especialidad": "Ginecología"
     },
     {
-      "Nombre": "Andrés Gómez",
-      "Especialidad": "Endocrinología"
+    "Nombre": "Andrés Gómez",
+    "Especialidad": "Endocrinología"
     },
     {
-      "Nombre": "María Ruíz",
-      "Especialidad": "Neurología"
+    "Nombre": "María Ruíz",
+    "Especialidad": "Neurología"
     },
     {
-      "Nombre": "Fernanda Espinoza",
-      "Especialidad": "Gastroenterología"
+    "Nombre": "Fernanda Espinoza",
+    "Especialidad": "Gastroenterología"
     },
     {
-      "Nombre": "Pablo Soto",
-      "Especialidad": "Oftalmología"
+    "Nombre": "Pablo Soto",
+    "Especialidad": "Oftalmología"
     },
     {
-      "Nombre": "Mario Martínez",
-      "Especialidad": "Otorrinolaringología"
+    "Nombre": "Mario Martínez",
+    "Especialidad": "Otorrinolaringología"
     },
     {
-      "Nombre": "Aldo Sheffer",
-      "Especialidad": "Pediatría"
+    "Nombre": "Aldo Sheffer",
+    "Especialidad": "Pediatría"
     },
     {
-      "Nombre": "Derek Sheppard",
-      "Especialidad": "Neurología"
+    "Nombre": "Derek Sheppard",
+    "Especialidad": "Neurología"
     },
     {
-      "Nombre": "Justin Soto",
-      "Especialidad": "Cardiología"
+    "Nombre": "Justin Soto",
+    "Especialidad": "Cardiología"
     },
     {
-      "Nombre": "Justin Soto F",
-      "Especialidad": "Cardiología"
+    "Nombre": "Justin Soto F",
+    "Especialidad": "Cardiología"
     }
-  ]
+]
