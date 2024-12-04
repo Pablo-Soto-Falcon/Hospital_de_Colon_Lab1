@@ -131,4 +131,9 @@ function mostrarResumen() {
 
 function closeModal() {
     document.getElementById('reservaModal').style.display = 'none';
+    limpiarFormulario();
+}
+
+function limpiarFormulario() {
+    document.getElementById('reservaForm').reset();
 }

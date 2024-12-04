@@ -1,0 +1,54 @@
+[
+    {
+      "Nombre": "Juan Pérez",
+      "Especialidad": "Cardiología"
+    },
+    {
+      "Nombre": "Ana López",
+      "Especialidad": "Dermatología"
+    },
+    {
+      "Nombre": "Carlos García",
+      "Especialidad": "Ortopedia"
+    },
+    {
+      "Nombre": "Laura Rodríguez",
+      "Especialidad": "Ginecología"
+    },
+    {
+      "Nombre": "Andrés Gómez",
+      "Especialidad": "Endocrinología"
+    },
+    {
+      "Nombre": "María Ruíz",
+      "Especialidad": "Neurología"
+    },
+    {
+      "Nombre": "Fernanda Espinoza",
+      "Especialidad": "Gastroenterología"
+    },
+    {
+      "Nombre": "Pablo Soto",
+      "Especialidad": "Oftalmología"
+    },
+    {
+      "Nombre": "Mario Martínez",
+      "Especialidad": "Otorrinolaringología"
+    },
+    {
+      "Nombre": "Aldo Sheffer",
+      "Especialidad": "Pediatría"
+    },
+    {
+      "Nombre": "Derek Sheppard",
+      "Especialidad": "Neurología"
+    },
+    {
+      "Nombre": "Justin Soto",
+      "Especialidad": "Cardiología"
+    },
+    {
+      "Nombre": "Justin Soto F",
+      "Especialidad": "Cardiología"
+    }
+  ]
