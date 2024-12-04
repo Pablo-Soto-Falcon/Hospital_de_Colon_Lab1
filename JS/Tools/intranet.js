@@ -1,158 +1,132 @@
-document.addEventListener("DOMContentLoaded", function () {
-    fetch('JSON/medicos.json')
-        .then(response => response.json())
-        .then(medicos => {
-            mostrarDoctores(medicos);
-            document.getElementById('runButton').addEventListener('click', () => ejecutarAccion(medicos));
-        })
-        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData().then(data => updateUI(data));
 });
 
-function mostrarDoctores(medicos) {
-    const doctoresContainer = document.getElementById('doctoresContainer');
-    doctoresContainer.innerHTML = '';
-
-    medicos.forEach((medico, index) => {
-        const medicoDiv = document.createElement('div');
-        medicoDiv.className = 'medico';
-
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.className = 'medico-checkbox';
-        checkbox.dataset.index = index;
-
-        const medicoTable = crearTablaMedico(medico);
-
-        const buttonContainer = document.createElement('div');
-        buttonContainer.className = 'button-container';
-
-        medicoDiv.appendChild(checkbox);
-        medicoDiv.appendChild(medicoTable);
-        medicoDiv.appendChild(buttonContainer);
-        doctoresContainer.appendChild(medicoDiv);
-    });
-}
-
-function crearTablaMedico(medico) {
-    const table = document.createElement('table');
-    table.className = 'medico-table';
-
-    for (const key in medico) {
-        if (medico.hasOwnProperty(key)) {
-            const row = document.createElement('tr');
-
-            const cellKey = document.createElement('td');
-            cellKey.textContent = key;
-            cellKey.className = 'medico-key';
-
-            const cellValue = document.createElement('td');
-            if (typeof medico[key] === 'object') {
-                cellValue.textContent = JSON.stringify(medico[key], null, 2);
-            } else {
-                cellValue.textContent = medico[key];
-            }
-            cellValue.className = 'medico-value';
-
-            row.appendChild(cellKey);
-            row.appendChild(cellValue);
-            table.appendChild(row);
+async function fetchData() {
+    try {
+        const response = await fetch('/api/medicos');
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return [];
     }
-
-    return table;
 }
 
-function ejecutarAccion(medicos) {
-    const selectedAction = document.getElementById('actionSelector').value;
-    const checkboxes = document.querySelectorAll('.medico-checkbox:checked');
-
-    checkboxes.forEach(checkbox => {
-        const index = checkbox.dataset.index;
-        const medico = medicos[index];
-
-        if (selectedAction === 'clone') {
-            clonarMedico(medico);
-        } else if (selectedAction === 'edit') {
-            abrirModalEdicion(medico, index);
+async function saveData(data) {
+    try {
+        const response = await fetch('/api/medicos', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
         }
+        const result = await response.json();
+        console.log(result.message);
+    } catch (error) {
+        console.error('Error saving data:', error);
+    }
+}
+
+async function editObject(id, newData) {
+    const data = await fetchData();
+    const index = data.findIndex(item => item.id === id);
+    if (index !== -1) {
+        data[index] = { ...data[index], ...newData };
+        await saveData(data);
+        updateUI(data);
+    }
+}
+
+async function cloneObject(id) {
+    const data = await fetchData();
+    const index = data.findIndex(item => item.id === id);
+    if (index !== -1) {
+        const newObject = { ...data[index], id: generateNewId(data) };
+        data.push(newObject);
+        await saveData(data);
+        updateUI(data);
+    }
+}
+
+function generateNewId(data) {
+    let newId;
+    do {
+        newId = '_' + Math.random().toString(36).substr(2, 9);
+    } while (data.some(item => item.id === newId));
+    return newId;
+}
+
+function updateUI(data) {
+    const container = document.getElementById('object-container');
+    container.innerHTML = '';
+    data.forEach(item => {
+        const element = document.createElement('div');
+        element.innerHTML = `
+            <p><strong>Nombre:</strong> ${item.Nombre}</p>
+            <p><strong>Sexo:</strong> ${item.Sexo}</p>
+            <p><strong>Especialidad:</strong> ${item.Especialidad}</p>
+            <p><strong>Años de experiencia:</strong> ${item['Años de experiencia']}</p>
+            <p><strong>Alma mater:</strong> ${item['Alma mater']}</p>
+            <p><strong>Horarios:</strong> ${formatHorarios(item.Horarios)}</p>
+            <button onclick="openModal('${item.id}')">Editar</button>
+            <button onclick="cloneObject('${item.id}')">Clonar</button>
+        `;
+        container.appendChild(element);
     });
 }
 
-function clonarMedico(medico) {
-    const clonedMedico = JSON.parse(JSON.stringify(medico));
-    console.log('Clonado:', clonedMedico);
-
-    const doctoresContainer = document.getElementById('doctoresContainer');
-    const clonedMedicoDiv = document.createElement('div');
-    clonedMedicoDiv.className = 'medico';
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.className = 'medico-checkbox';
-
-    const clonedMedicoTable = crearTablaMedico(clonedMedico);
-
-    const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'button-container';
-
-    clonedMedicoDiv.appendChild(checkbox);
-    clonedMedicoDiv.appendChild(clonedMedicoTable);
-    clonedMedicoDiv.appendChild(buttonContainer);
-    doctoresContainer.appendChild(clonedMedicoDiv);
+function formatHorarios(horarios) {
+    return Object.entries(horarios).map(([dia, horas]) => `${dia}: ${horas.join(', ')}`).join('<br>');
 }
 
-function abrirModalEdicion(medico, index) {
+function openModal(id) {
+    fetchData().then(data => {
+        const item = data.find(item => item.id === id);
+        if (item) {
+            document.getElementById('object-id').value = item.id;
+            document.getElementById('object-name').value = item.Nombre;
+            document.getElementById('object-sexo').value = item.Sexo;
+            document.getElementById('object-specialty').value = item.Especialidad;
+            document.getElementById('object-experience').value = item['Años de experiencia'];
+            document.getElementById('object-alma-mater').value = item['Alma mater'];
+            document.getElementById('object-horarios').value = JSON.stringify(item.Horarios);
+        }
+    });
+
     const modal = document.getElementById('editModal');
-    const form = document.getElementById('editForm');
-    form.innerHTML = '';
-
-    for (const key in medico) {
-        if (medico.hasOwnProperty(key)) {
-            const label = document.createElement('label');
-            label.textContent = key;
-
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.name = key;
-            input.value = typeof medico[key] === 'object' ? JSON.stringify(medico[key]) : medico[key];
-
-            form.appendChild(label);
-            form.appendChild(input);
-        }
-    }
-
-    const saveButton = document.getElementById('saveButton');
-    saveButton.onclick = () => guardarEdicion(medico, index);
-
     modal.style.display = 'block';
-
-    const closeBtn = document.querySelector('.modal .close');
-    closeBtn.onclick = function() {
-        modal.style.display = 'none';
-    };
-
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    };
+    document.getElementById('modal-title').innerText = 'Editar Médico';
+    document.getElementById('saveButton').onclick = () => saveObject(id);
 }
 
-function guardarEdicion(medico, index) {
-    const form = document.getElementById('editForm');
-    const formData = new FormData(form);
-
-    formData.forEach((value, key) => {
-        try {
-            medico[key] = JSON.parse(value);
-        } catch (e) {
-            medico[key] = value;
-        }
-    });
-
-    localStorage.setItem(`medico_${index}`, JSON.stringify(medico));
-    mostrarDoctores([medico]);
-
+function closeModal() {
     const modal = document.getElementById('editModal');
     modal.style.display = 'none';
+}
+
+function saveObject(id) {
+    const name = document.getElementById('object-name').value;
+    const sexo = document.getElementById('object-sexo').value;
+    const specialty = document.getElementById('object-specialty').value;
+    const experience = document.getElementById('object-experience').value;
+    const almaMater = document.getElementById('object-alma-mater').value;
+    const horarios = JSON.parse(document.getElementById('object-horarios').value);
+
+    editObject(id, {
+        Nombre: name,
+        Sexo: sexo,
+        Especialidad: specialty,
+        'Años de experiencia': experience,
+        'Alma mater': almaMater,
+        Horarios: horarios
+    });
+    closeModal();
 }

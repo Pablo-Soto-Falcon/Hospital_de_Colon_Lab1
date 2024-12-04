@@ -1,0 +1,16 @@
+{
+  "name": "hospital_de_colon_lab1",
+  "version": "1.0.0",
+  "description": "Este proyecto tiene como objetivo la creación de una página web para el Hospital Español de Colón. La web está diseñada para mostrar el equipo médico, permitir la reserva de citas y ofrecer información de contacto. A continuación, se detallan los aspectos clave de la implementación, incluyendo la integración de prompts, validación de datos, uso de variables y manejo de errores.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1"
+  }
+}
