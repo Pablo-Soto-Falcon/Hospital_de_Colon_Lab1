@@ -76,11 +76,26 @@
     </div>
 
     <!-- Modal -->
-    <div id="reservaModal" class="modal">
+    <!-- <div id="reservaModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Resumen de la Reserva</h2>
             <p id="reservaResumen"></p>
+        </div>
+    </div> -->
+    <!-- Contenedor para el resumen de la reserva -->
+    <!-- Modal para el resumen de la reserva -->
+    <div id="reservaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Resumen de la Reserva</h2>
+            <p><strong>Nombre Completo:</strong> <span id="resumenNombre"></span></p>
+            <p><strong>Correo Electrónico:</strong> <span id="resumenEmail"></span></p>
+            <p><strong>Teléfono:</strong> <span id="resumenTelefono"></span></p>
+            <p><strong>Especialidad:</strong> <span id="resumenEspecialidad"></span></p>
+            <p><strong>Doctor:</strong> <span id="resumenDoctor"></span></p>
+            <p><strong>Día:</strong> <span id="resumenDia"></span></p>
+            <p><strong>Hora:</strong> <span id="resumenHora"></span></p>
         </div>
     </div>
 
@@ -119,6 +134,8 @@
     </footer>
 
     <script src="JS/Personal/booking.js"></script>
+
+</body>
 </body>
 </html>
 
